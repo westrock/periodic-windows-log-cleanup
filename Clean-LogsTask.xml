@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Task Installer Header
+  ---------------------
+  Purpose: Monthly Windows log backup and cleanup using Clean-Logs.ps1
+
+  Schedule & behavior:
+    - Runs once a month: every 4 weeks on Sunday
+    - Start time: 03:00 (see <StartBoundary>)
+    - StartBoundary in this file: 2026-03-01T03:00:00
+    - Trigger type: CalendarTrigger (ScheduleByWeek with WeeksInterval=4)
+    - Multiple instances: IgnoreNew
+    - Run level: HighestAvailable
+    - Logon type: S4U (runs without storing credentials)
+    - Execution time limit: 2 hours (PT2H)
+    - Starts when available; allowed on battery (DisallowStartIfOnBatteries=false)
+    - Non-interactive / suitable for Scheduled Task (no prompts)
+
+  Action:
+    - Executable: powershell.exe
+    - Arguments: -NoProfile -ExecutionPolicy Bypass -File "C:\Users\efigarsky\Scripts\Clean-Logs.ps1" -BackupRoot "D:\LogBackups"
+
+  Notes:
+    - Adjust the <StartBoundary>, command path, and BackupRoot argument as needed for your environment.
+    - If using S4U, ensure the chosen principal has the required rights to run the task and to access target paths.
+-->
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Author>Ed</Author>
