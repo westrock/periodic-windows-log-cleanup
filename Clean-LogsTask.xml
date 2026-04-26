@@ -18,7 +18,7 @@
 
   Action:
     - Executable: powershell.exe
-    - Arguments: -NoProfile -ExecutionPolicy Bypass -File "C:\Users\efigarsky\Scripts\Clean-Logs.ps1" -BackupRoot "D:\LogBackups"
+    - Arguments: -NoProfile -ExecutionPolicy Bypass -File "%UserProfile%\Scripts\Clean-Logs.ps1" -BackupRoot "D:\LogBackups"
 
   Notes:
     - Adjust the <StartBoundary>, command path, and BackupRoot argument as needed for your environment.
@@ -70,7 +70,7 @@
   <Actions Context="Author">
     <Exec>
       <Command>powershell.exe</Command>
-      <Arguments>-NoProfile -ExecutionPolicy Bypass -File "C:\Users\efigarsky\Scripts\Clean-Logs.ps1" -BackupRoot "C:\LogBackups"</Arguments>
+      <Arguments>-NoProfile -ExecutionPolicy Bypass -File "%UserProfile%\Scripts\Clean-Logs.ps1" -BackupRoot "C:\LogBackups"</Arguments>
     </Exec>
   </Actions>
 </Task>
