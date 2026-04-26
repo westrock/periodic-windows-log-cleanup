@@ -1,1 +1,78 @@
-﻿/.vs
+﻿# .gitignore - keep your PowerShell script, README.md, and install.xml tracked
+
+# --------------------
+# OS / Explorer files
+# --------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --------------------
+# IDE / Editor
+# --------------------
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --------------------
+# Build / artifacts
+# --------------------
+bin/
+obj/
+out/
+build/
+dist/
+*.exe
+*.dll
+*.pdb
+*.app
+*.msi
+*.msix
+*.nupkg
+*.zip
+
+# --------------------
+# Package managers
+# --------------------
+packages/
+node_modules/
+
+# --------------------
+# Logs / temp / backup
+# --------------------
+*.log
+*.tmp
+*.temp
+*.bak
+
+# --------------------
+# Common generated files
+# --------------------
+__pycache__/
+*.pyc
+
+# --------------------
+# Secrets / certs
+# --------------------
+*.pfx
+*.p12
+secrets.env
+
+# --------------------
+# XML handling:
+# ignore generic XML files but keep the repository's install.xml
+# --------------------
+*.xml
+!install.xml
+
+# --------------------
+# Ensure project scripts/docs remain tracked
+# --------------------
+!*.ps1
+!README.md
+!LICENSE
+!.gitattributes
